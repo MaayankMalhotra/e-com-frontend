@@ -214,27 +214,26 @@ function ProductForm() {
               </div>
 
               <div className="col-span-full">
-                <label
-                  htmlFor="brand"
-                  className="block text-sm font-medium leading-6 text-gray-900"
-                >
-                  Brand
-                </label>
-                <div className="mt-2">
-                  <select
-                    {...register('brand', {
-                      required: 'brand is required',
-                    })}
-                  >
-                    <option value="">--choose brand--</option>
-                    {brands.map((brand) => (
-                      <option key={brand.value} value={brand.value}>
-                        {brand.label}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              </div>
+  <label
+    htmlFor="brand"
+    className="block text-sm font-medium leading-6 text-gray-900"
+  >
+    Brand
+  </label>
+  <div className="mt-2">
+    <input
+      type="text"
+      id="brand"
+      name="brand"
+      placeholder="-- Enter brand --"
+      {...register('brand', {
+        required: 'Brand is required',
+      })}
+      className="block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+    />
+  </div>
+</div>
+
 
               <div className="col-span-full">
                 <label
@@ -281,27 +280,26 @@ function ProductForm() {
               </div>
 
               <div className="col-span-full">
-                <label
-                  htmlFor="category"
-                  className="block text-sm font-medium leading-6 text-gray-900"
-                >
-                  Category
-                </label>
-                <div className="mt-2">
-                  <select
-                    {...register('category', {
-                      required: 'category is required',
-                    })}
-                  >
-                    <option value="">--choose category--</option>
-                    {categories.map((category) => (
-                      <option key={category.value} value={category.value}>
-                        {category.label}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              </div>
+  <label
+    htmlFor="category"
+    className="block text-sm font-medium leading-6 text-gray-900"
+  >
+    Category
+  </label>
+  <div className="mt-2">
+    <input
+      type="text"
+      id="category"
+      name="category"
+      placeholder="-- Enter category --"
+      {...register('category', {
+        required: 'Category is required',
+      })}
+      className="block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+    />
+  </div>
+</div>
+
 
               <div className="sm:col-span-2">
                 <label
